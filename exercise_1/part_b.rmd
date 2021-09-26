@@ -4,8 +4,10 @@ output: html_document
 author: "Jessica Lam"
 ---
 
-# Introduction
-In this homework, we will sample 100 values from the LogNormal distribution with $\mu = 0$ and $\sigma = 0.25$. We have set a seed for reproducibility. 
+## Introduction
+
+In this homework, we will sample 100 values from the LogNormal distribution with $\mu = 0$ and $\sigma = 0.25$. We have set a seed for reproducibility.
+
 ```{r}
 set.seed(2)
 x <- rlnorm(n = 100, meanlog = 0, sdlog = .25)
@@ -14,6 +16,7 @@ x <- rlnorm(n = 100, meanlog = 0, sdlog = .25)
 ## Visualisation
 
 Below is the histogram of sampled values. The sample mean is `r mean(x)` and the sample variance is `r var(x)`.
+
 ```{r}
 hist(x,
     main = "Histogram of 100 values from LN(1,0.25)",
@@ -24,4 +27,3 @@ hist(x,
     col = "#7e4d7e"
 )
 ```
-
